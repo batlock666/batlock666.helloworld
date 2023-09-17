@@ -3,6 +3,7 @@ ignore =
     D200
 
 exclude =
+    tmp
     venv
 
 max-line-length = 80

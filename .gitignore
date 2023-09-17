@@ -192,3 +192,4 @@ tags
 [._]*.un~
 
 ### Project ###
+tmp/

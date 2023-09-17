@@ -1,5 +1,6 @@
 PYTHON_VERSION := 3.9.13
 VENV_DIR := venv
+TMP_DIR := tmp
 
 PYTHON := $(VENV_DIR)/bin/python
 PIP := $(VENV_DIR)/bin/pip
@@ -11,6 +12,7 @@ $(VENV_DIR)/bin/activate: requirements.txt
 	pyenv local $(PYTHON_VERSION)
 	python -m venv $(VENV_DIR)
 	$(PIP) install -q -r requirements.txt
+	mkdir -p $(TMP_DIR)
 
 venv: $(VENV_DIR)/bin/activate
 
@@ -30,5 +32,6 @@ clean:
 	rm -rf tests/__pycache__/
 	rm -rf $(VENV_DIR)/
 	pyenv local --unset
+	rm -rf $(TMP_DIR)
 
 .PHONY: all venv develop test clean
