@@ -40,4 +40,9 @@ setup(
     license="GPL-3.0-or-later",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
+    entry_points={
+        "console_scripts": [
+            "hello_world=batlock666.helloworld.scripts:hello_world",
+        ],
+    },
 )
