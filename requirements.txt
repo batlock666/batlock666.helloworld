@@ -1,3 +1,12 @@
+flake8==6.1.0
+flake8-docstrings==1.7.0
+flake8-import-order==0.18.2
+flake8-quotes==3.3.2
+mccabe==0.7.0
 pip==23.2.1
+pycodestyle==2.11.0
+pydocstyle==6.3.0
+pyflakes==3.1.0
 setuptools==68.1.2
+snowballstemmer==2.2.0
 wheel==0.41.2

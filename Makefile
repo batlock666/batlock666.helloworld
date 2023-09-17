@@ -3,6 +3,7 @@ VENV_DIR := venv
 
 PYTHON := $(VENV_DIR)/bin/python
 PIP := $(VENV_DIR)/bin/pip
+FLAKE8 := $(VENV_DIR)/bin/flake8
 
 all: venv
 
@@ -15,6 +16,9 @@ venv: $(VENV_DIR)/bin/activate
 
 develop: venv
 	$(PIP) install -q -e .
+
+flake8: venv
+	$(FLAKE8) || true
 
 test: develop
 	$(PYTHON) -m unittest -v
