@@ -1,0 +1,14 @@
+[flake8]
+ignore =
+    D200
+
+exclude =
+    venv
+
+max-line-length = 80
+
+; flake8-quotes
+inline-quotes = double
+
+; flake8-import-order
+import-order-style = pep8
