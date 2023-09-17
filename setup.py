@@ -1,11 +1,28 @@
 # NOQA: D100
 
+import os.path
+
 from setuptools import setup
+
+
+def read_file(*paths):
+    """Read a file.
+    """
+    with open(os.path.join(os.path.dirname(__file__), *paths)) as fp:
+        return fp.read()
+
+
+LONG_DESCRIPTION = "\n".join([
+    read_file("README.rst"),
+    read_file("LICENSE.rst"),
+])
 
 setup(
     name="batlock666.helloworld",
     version="0.1.0",
     description='A "Hello, World!" program.',
+    long_description=LONG_DESCRIPTION,
+    long_description_content_type="text/x-rst",
     classifiers=[
         "Development Status :: 1 - Planning",
         "Environment :: Console",
