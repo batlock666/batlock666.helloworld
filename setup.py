@@ -2,6 +2,7 @@
 
 import os.path
 
+from setuptools import find_packages
 from setuptools import setup
 
 
@@ -37,4 +38,6 @@ setup(
     author_email="batlock666@gmail.com",
     url="https://github.com/batlock666/batlock666.helloworld",
     license="GPL-3.0-or-later",
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
 )
