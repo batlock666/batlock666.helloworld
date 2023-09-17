@@ -15,6 +15,7 @@ def read_file(*paths):
 
 LONG_DESCRIPTION = "\n".join([
     read_file("README.rst"),
+    read_file("CONTRIBUTING.rst"),
     read_file("LICENSE.rst"),
 ])
 
