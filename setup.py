@@ -17,6 +17,7 @@ LONG_DESCRIPTION = "\n".join([
     read_file("README.rst"),
     read_file("CONTRIBUTING.rst"),
     read_file("LICENSE.rst"),
+    read_file("CHANGELOG.rst"),
 ])
 
 setup(
